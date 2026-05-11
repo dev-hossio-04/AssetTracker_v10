@@ -249,28 +249,6 @@ Other devices on the same network can access:
 http://192.xxx.x.xx:5000
 ```
 
----
-
-# Asset ID Prefix System
-
-| Asset Type | Prefix |
-|---|---|
-| Laptop | NCSM |
-| Printer | PRI |
-| Presenter | PRE |
-| Pendrive | PEN |
-| Power Adapter | ADC |
-| Monitor | MON |
-| Keyboard | KEY |
-| Mouse | MOU |
-| Headset | HPE |
-| Camera | CAM |
-| Router | ROU |
-| Switch | SWI |
-
-
-# Project Structure
-
 ```text
 AssetTracker_v10/
 │
