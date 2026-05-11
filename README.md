@@ -1,2 +1,161 @@
-# AssetTracker_v10
-Small sized Asset Tracking system
+# Asset Tracker System
+
+Offline Flask-based Asset Management System built with Python, Flask, and SQLite.
+
+---
+
+## Overview
+
+Asset Tracker System is a lightweight offline asset management solution designed for:
+- IT departments
+- event teams
+- schools
+- organizations
+- small businesses
+- community projects
+
+The system supports:
+- asset inventory management
+- check-in / check-out tracking
+- audit logging
+- multiple user logins
+- reporting
+- Excel export
+- offline local deployment
+
+Built for simplicity, flexibility, and future scalability.
+
+---
+
+# Features
+
+## Asset Management
+- Add new assets
+- Edit assets
+- Asset categorization
+- Asset status tracking
+- Flexible asset ID system
+
+## Asset Status Support
+- Available
+- Checked Out
+- Returned
+- Under Repair
+- Damaged
+- Lost
+- Retired
+- Permanently Assigned
+
+## User Management
+- Admin accounts
+- Staff accounts
+- Viewer accounts
+- Password authentication
+- Password reset support
+
+## Transaction Tracking
+- Check-in
+- Check-out
+- Authorized by tracking
+- Performed by tracking
+- PC hostname tracking
+- Audit logs
+
+## Reporting
+- Dashboard overview
+- Recent activity
+- Excel export
+- Transaction history
+
+## Flexible Assignment System
+- Manual assignment support
+- Optional staff database
+- Optional staff ID
+- Supports:
+  - staff
+  - freelancers
+  - vendors
+  - temporary crews
+  - organizations
+
+## Database
+- SQLite local database
+- Portable
+- Easy backup
+- Offline support
+
+---
+
+# Technology Stack
+
+| Component | Technology |
+|---|---|
+| Backend | Flask |
+| Database | SQLite |
+| Frontend | HTML / CSS |
+| ORM | SQLAlchemy |
+| Authentication | Flask-Login |
+| Excel Export | OpenPyXL |
+
+---
+
+# Requirements
+
+- Python 3.11+
+- Windows / Linux
+- Modern web browser
+
+---
+
+# Installation
+
+## 1. Clone or Download Project
+
+```bash
+git clone https://github.com/dev-hossio-04/AssetTracker_v10
+
+
+ASSET TRACKER FLASK WORKING STARTER
+
+1. Extract this folder.
+2. Open the folder in VS Code.
+3. Open terminal in the project root.
+4. Run:
+
+python -m venv venv
+
+5. Activate:
+
+PowerShell:
+venv\Scripts\activate
+
+If PowerShell blocks it, run:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+OR use CMD:
+venv\Scripts\activate.bat
+
+6. Install packages:
+
+pip install -r requirements.txt
+
+7. Create database:
+
+python create_db.py
+
+8. Add sample data and admin account:
+
+python seed_data.py
+
+9. Run:
+
+python run.py
+
+10. Open browser:
+
+http://127.0.0.1:5000
+
+Login:
+username: admin
+password: admin123
+
