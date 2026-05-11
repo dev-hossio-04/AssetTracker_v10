@@ -240,13 +240,13 @@ ipconfig
 Example:
 
 ```text
-192.168.1.50
+192.xxx.x.xx
 ```
 
 Other devices on the same network can access:
 
 ```text
-http://192.168.1.50:5000
+http://192.xxx.x.xx:5000
 ```
 
 ---
@@ -312,15 +312,7 @@ This file contains:
 
 ---
 
-# Deployment To Another PC
-
-Copy the full project folder:
-
-```text
-AssetTracker_v10
-```
-
-Then on the new PC:
+# Deployment To PC
 
 ## 1. Install Python
 
@@ -429,19 +421,7 @@ Built with:
 
 ---
 
-# Future Roadmap
 
-Planned future features:
-- barcode scanning
-- QR code support
-- PDF reporting
-- dark mode
-- image attachments
-- maintenance scheduling
-- Docker deployment
-- PostgreSQL support
-
----
 
 # Community Contributions
 
