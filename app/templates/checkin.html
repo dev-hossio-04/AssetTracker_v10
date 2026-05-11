@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h1>Check-In Asset</h1>
+    <form method="POST">
+        <label>Asset</label>
+        <select name="asset_id" required>
+            {% for a in assets %}
+            <option value="{{ a.asset_id }}">{{ a.asset_id }} - Assigned to {{ a.assigned_to }}</option>
+            {% endfor %}
+        </select>
+
+        <label>Return Condition</label>
+        <select name="condition">
+            <option value="Returned">Returned / Good</option>
+            <option value="Damaged">Damaged</option>
+            <option value="Under Repair">Under Repair</option>
+        </select>
+
+        <label>Authorized By</label>
+        <input name="authorized_by" required>
+
+        <label>Remarks</label>
+        <textarea name="remarks"></textarea>
+
+        <button>Check-In</button>
+    </form>
+</div>
+{% endblock %}

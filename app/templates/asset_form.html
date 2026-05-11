@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h1>Add Asset</h1>
+    <form method="POST">
+        <label>Asset ID</label>
+        <input name="asset_id" required>
+
+        <label>Asset Type</label>
+        <input name="asset_type" required>
+
+        <label>Brand</label>
+        <input name="brand">
+
+        <label>Model</label>
+        <input name="model">
+
+        <label>Serial Number</label>
+        <input name="serial_number">
+
+        <label>Status</label>
+        <select name="status">
+            <option>Available</option>
+            <option>Checked Out</option>
+            <option>Under Repair</option>
+            <option>Damaged</option>
+            <option>Lost</option>
+            <option>Retired</option>
+        </select>
+
+        <label>Location</label>
+        <input name="location">
+
+        <label>Notes</label>
+        <textarea name="notes"></textarea>
+
+        <button>Save Asset</button>
+        <a class="btn btn-light" href="{{ url_for('main.assets') }}">Cancel</a>
+    </form>
+</div>
+{% endblock %}
