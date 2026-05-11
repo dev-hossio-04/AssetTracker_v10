@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h1>Edit Asset</h1>
+
+    <form method="POST">
+        <label>Asset ID</label>
+        <input value="{{ asset.asset_id }}" disabled>
+
+        <label>Asset Type</label>
+        <input name="asset_type" value="{{ asset.asset_type }}" required>
+
+        <label>Brand</label>
+        <input name="brand" value="{{ asset.brand }}">
+
+        <label>Model</label>
+        <input name="model" value="{{ asset.model }}">
+
+        <label>Serial Number</label>
+        <input name="serial_number" value="{{ asset.serial_number }}">
+
+        <label>Status</label>
+        <select name="status">
+            {% for s in ["Available","Checked Out","Returned","Under Repair","Damaged","Lost","Retired","Permanently Assigned"] %}
+            <option value="{{ s }}" {% if asset.status == s %}selected{% endif %}>{{ s }}</option>
+            {% endfor %}
+        </select>
+
+        <label>Assigned To</label>
+        <input name="assigned_to" value="{{ asset.assigned_to or '' }}">
+
+        <label>Location</label>
+        <input name="location" value="{{ asset.location or '' }}">
+
+        <label>Notes</label>
+        <textarea name="notes">{{ asset.notes or '' }}</textarea>
+
+        <button>Save Changes</button>
+        <a class="btn btn-light" href="{{ url_for('main.assets') }}">Cancel</a>
+
+        <label>Condition</label>
+        <input name="condition" value="{{ asset.condition or '' }}">
+
+        <label>Purpose</label>
+        <textarea name="purpose">{{ asset.purpose or '' }}</textarea>
+
+        <label>Notes</label>
+        <textarea name="notes">{{ asset.notes or '' }}</textarea>
+    </form>
+</div>
+{% endblock %}
