@@ -7,6 +7,7 @@ Offline Flask-based Asset Management System built with Python, Flask, and SQLite
 ## Overview
 
 Asset Tracker System is a lightweight offline asset management solution designed for:
+
 - IT departments
 - event teams
 - schools
@@ -15,6 +16,7 @@ Asset Tracker System is a lightweight offline asset management solution designed
 - community projects
 
 The system supports:
+
 - asset inventory management
 - check-in / check-out tracking
 - audit logging
@@ -27,16 +29,18 @@ Built for simplicity, flexibility, and future scalability.
 
 ---
 
-# Features
+## Features
 
-## Asset Management
+### Asset Management
+
 - Add new assets
 - Edit assets
 - Asset categorization
 - Asset status tracking
 - Flexible asset ID system
 
-## Asset Status Support
+### Asset Status Support
+
 - Available
 - Checked Out
 - Returned
@@ -46,14 +50,16 @@ Built for simplicity, flexibility, and future scalability.
 - Retired
 - Permanently Assigned
 
-## User Management
+### User Management
+
 - Admin accounts
 - Staff accounts
 - Viewer accounts
 - Password authentication
 - Password reset support
 
-## Transaction Tracking
+### Transaction Tracking
+
 - Check-in
 - Check-out
 - Authorized by tracking
@@ -61,24 +67,29 @@ Built for simplicity, flexibility, and future scalability.
 - PC hostname tracking
 - Audit logs
 
-## Reporting
+### Reporting
+
 - Dashboard overview
 - Recent activity
 - Excel export
 - Transaction history
 
-## Flexible Assignment System
+### Flexible Assignment System
+
 - Manual assignment support
 - Optional staff database
 - Optional staff ID
-- Supports:
-  - staff
-  - freelancers
-  - vendors
-  - temporary crews
-  - organizations
 
-## Database
+Supports:
+
+- staff
+- freelancers
+- vendors
+- temporary crews
+- organizations
+
+### Database
+
 - SQLite local database
 - Portable
 - Easy backup
@@ -86,7 +97,7 @@ Built for simplicity, flexibility, and future scalability.
 
 ---
 
-# Technology Stack
+## Technology Stack
 
 | Component | Technology |
 |---|---|
@@ -99,7 +110,7 @@ Built for simplicity, flexibility, and future scalability.
 
 ---
 
-# Requirements
+## Requirements
 
 - Python 3.11+
 - Windows / Linux
@@ -107,55 +118,69 @@ Built for simplicity, flexibility, and future scalability.
 
 ---
 
-# Installation
+## Installation
 
-## 1. Clone or Download Project
+### 1. Clone or Download Project
 
 ```bash
 git clone https://github.com/dev-hossio-04/AssetTracker_v10
 
 
-ASSET TRACKER FLASK WORKING STARTER
 
-1. Extract this folder.
-2. Open the folder in VS Code.
-3. Open terminal in the project root.
-4. Run:
+2. Open Project Folder
+cd AssetTracker_v10
 
-python -m venv venv
+3. Create Virtual Environment
+python -m venv .venv
+4. Activate Virtual Environment
+Windows PowerShell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+.\.venv\Scripts\Activate.ps1
+Windows CMD
+.venv\Scripts\activate.bat
+5. Install Requirements
+python -m pip install -r requirements.txt
 
-5. Activate:
+If pip is not recognized, use:
 
-PowerShell:
-venv\Scripts\activate
-
-If PowerShell blocks it, run:
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-
-OR use CMD:
-venv\Scripts\activate.bat
-
-6. Install packages:
-
-pip install -r requirements.txt
-
-7. Create database:
-
+python -m pip install flask flask-login flask-sqlalchemy werkzeug openpyxl
+6. Create Database
 python create_db.py
-
-8. Add sample data and admin account:
-
+7. Create Default Admin / Sample Data
 python seed_data.py
-
-9. Run:
-
+8. Run System Manually
 python run.py
 
-10. Open browser:
+Then open:
 
 http://127.0.0.1:5000
+Default Login
+Username	Password
+admin	admin123
 
-Login:
-username: admin
-password: admin123
+Important: change the default admin password after first login.
 
+Easier Start / Stop Method
+
+After setup is complete, you can start and stop the system using batch files.
+
+Start System
+
+Double-click:
+
+start_asset_tracker.bat
+
+Or run:
+
+start_asset_tracker.bat
+Stop System
+
+Double-click:
+
+stop_asset_tracker.bat
+
+Or run:
+
+stop_asset_tracker.bat
+
+The stop script stops the service running on port 5000.
