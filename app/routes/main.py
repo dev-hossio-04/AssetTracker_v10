@@ -122,6 +122,7 @@ def checkout():
         event_name = request.form.get("event_name", "").strip()
         authorized_by = request.form.get("authorized_by", "").strip()
         remarks = request.form.get("remarks", "").strip()
+        purpose = request.form.get("purpose", "").strip()
 
         asset = Asset.query.filter_by(asset_id=asset_id).first()
 
@@ -135,6 +136,7 @@ def checkout():
 
         asset.status = "Checked Out"
         asset.assigned_to = assigned_to
+        asset.purpose = purpose
 
         tx = Transaction(
             asset_id=asset.asset_id,
@@ -179,6 +181,9 @@ def checkin():
         asset.status = "Available" if condition == "Returned" else condition
         old_assigned = asset.assigned_to
         asset.assigned_to = None if asset.status == "Available" else asset.assigned_to
+
+        if asset.status == "Available":
+             asset.purpose = ""
 
         tx = Transaction(
             asset_id=asset.asset_id,
