@@ -1,5 +1,6 @@
 @echo off
-cd /d C:\AssetTracker_v10
+
+cd /d %~dp0
 
 call .venv\Scripts\activate.bat
 
